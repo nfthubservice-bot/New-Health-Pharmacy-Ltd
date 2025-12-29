@@ -41,13 +41,13 @@ const Footer: React.FC<FooterProps> = ({ name, onNavigate }) => {
                 <i className="fa-solid fa-chevron-right text-[10px] mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
                 Services
               </button></li>
-              <li><button onClick={() => onNavigate('gallery')} className="group flex items-center text-slate-400 hover:text-emerald-400 transition-colors text-left">
+              <li><button onClick={() => onNavigate('booking')} className="group flex items-center text-slate-400 hover:text-emerald-400 transition-colors text-left">
                 <i className="fa-solid fa-chevron-right text-[10px] mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
-                Gallery
+                Book Appointment
               </button></li>
-              <li><button onClick={() => onNavigate('ai-hub')} className="group flex items-center text-slate-400 hover:text-emerald-400 transition-colors text-left">
+              <li><button onClick={() => onNavigate('testimonials')} className="group flex items-center text-slate-400 hover:text-emerald-400 transition-colors text-left">
                 <i className="fa-solid fa-chevron-right text-[10px] mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
-                Ask AI
+                Reviews
               </button></li>
             </ul>
           </div>
@@ -74,15 +74,18 @@ const Footer: React.FC<FooterProps> = ({ name, onNavigate }) => {
           </div>
         </div>
         
-        <div className="border-t border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center text-slate-500 transition-colors">
-          <p className="text-base">
+        <div className="border-t border-slate-800 pt-12 flex flex-col md:flex-row justify-between items-center text-slate-500 transition-colors text-center md:text-left space-y-4 md:space-y-0">
+          <p className="text-xs sm:text-base whitespace-nowrap">
             &copy; {new Date().getFullYear()} {name}. All rights reserved.
           </p>
-          <div className="flex space-x-8 mt-6 md:mt-0 font-medium">
-            <a href="#" className="hover:text-emerald-400 transition-colors flex items-center">
-              <i className="fa-solid fa-shield-halved text-xs mr-2"></i>
+          <div className="flex space-x-8 font-medium">
+            <button 
+              onClick={() => onNavigate('privacy')}
+              className="hover:text-emerald-400 transition-colors flex items-center uppercase tracking-widest text-[10px] font-black"
+            >
+              <i className="fa-solid fa-shield-halved text-[8px] mr-2"></i>
               Privacy Policy
-            </a>
+            </button>
           </div>
         </div>
       </div>

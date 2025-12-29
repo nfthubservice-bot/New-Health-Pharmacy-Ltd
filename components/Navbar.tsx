@@ -31,8 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ pharmacyName, currentPage, onNavigate, 
     { name: 'Home', id: 'home', icon: 'fa-house' },
     { name: 'About', id: 'about', icon: 'fa-info-circle' },
     { name: 'Services', id: 'services', icon: 'fa-hand-holding-medical' },
-    { name: 'Gallery', id: 'gallery', icon: 'fa-images' },
-    { name: 'Ask AI', id: 'ai-hub', icon: 'fa-robot' },
+    { name: 'Book Slot', id: 'booking', icon: 'fa-calendar-check' },
     { name: 'Reviews', id: 'testimonials', icon: 'fa-star' },
   ];
 

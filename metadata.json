@@ -1,9 +1,7 @@
 {
   "name": "New-Health Pharmacy Landing",
-  "description": "Premium pharmacy landing page with integrated AI Health Assistant",
+  "description": "Premium pharmacy landing page",
   "requestFramePermissions": [
-    "geolocation",
-    "microphone",
-    "camera"
+    "geolocation"
   ]
 }

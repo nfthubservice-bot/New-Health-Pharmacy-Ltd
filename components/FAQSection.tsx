@@ -45,7 +45,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: "How can I check if a medication is currently in stock?",
-      answer: "You can check medication availability by calling us directly at 08039366563, chatting with our AI Assistant on this website, or messaging us on WhatsApp. We provide real-time stock verification for your convenience."
+      answer: "You can check medication availability by calling us directly at 08039366563 or messaging us on WhatsApp. We provide prompt stock verification for your convenience."
     },
     {
       question: "Do you provide professional health consultations?",

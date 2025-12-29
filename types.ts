@@ -23,6 +23,27 @@ export interface PharmacyData {
   };
 }
 
+// Added missing ChatMessage interface to support clinical AI assistant history
+export interface ChatMessage {
+  role: 'user' | 'model';
+  parts: {
+    text?: string;
+    inlineData?: {
+      data: string;
+      mimeType: string;
+    };
+    functionCall?: {
+      name: string;
+      args: any;
+    };
+    functionResponse?: {
+      name: string;
+      response: any;
+    };
+  }[];
+  groundingMetadata?: any;
+}
+
 export interface ContactFormState {
   name: string;
   email: string;
@@ -30,12 +51,15 @@ export interface ContactFormState {
   status: 'idle' | 'submitting' | 'success' | 'error';
 }
 
-export interface ChatMessage {
-  role: 'user' | 'model';
-  parts: { text?: string; inlineData?: { data: string; mimeType: string } }[];
-  groundingMetadata?: any;
+export interface BookingFormState {
+  name: string;
+  phone: string;
+  address: string;
+  needs: string;
+  date: string;
+  status: 'idle' | 'submitting' | 'success' | 'error';
 }
 
-export type Page = 'home' | 'about' | 'services' | 'gallery' | 'testimonials' | 'ai-hub' | 'contact';
+export type Page = 'home' | 'about' | 'services' | 'booking' | 'testimonials' | 'contact' | 'privacy';
 export type AspectRatio = "1:1" | "2:3" | "3:2" | "3:4" | "4:3" | "9:16" | "16:9" | "21:9";
 export type ImageSize = "1K" | "2K" | "4K";
