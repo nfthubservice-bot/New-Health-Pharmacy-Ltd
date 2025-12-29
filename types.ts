@@ -23,7 +23,6 @@ export interface PharmacyData {
   };
 }
 
-// Added missing ChatMessage interface to support clinical AI assistant history
 export interface ChatMessage {
   role: 'user' | 'model';
   parts: {
@@ -34,14 +33,14 @@ export interface ChatMessage {
     };
     functionCall?: {
       name: string;
-      args: any;
+      args: unknown;
     };
     functionResponse?: {
       name: string;
-      response: any;
+      response: unknown;
     };
   }[];
-  groundingMetadata?: any;
+  groundingMetadata?: unknown;
 }
 
 export interface ContactFormState {
